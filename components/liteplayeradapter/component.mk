@@ -13,6 +13,7 @@ COMPONENT_SRCDIRS := .
 
 COMPONENT_OBJS := \
     source_httpclient_wrapper.o \
+    source_esp32_flashtone_wrapper.o \
     sink_esp32_i2s_wrapper.o
 
 #CFLAGS += -DOS_RTOS -DOS_FREERTOS_ESP8266

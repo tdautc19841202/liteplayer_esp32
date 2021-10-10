@@ -3,11 +3,11 @@
 cmake_minimum_required(VERSION 3.5)
 
 include($ENV{ADF_PATH}/CMakeLists.txt)
-
+# Must behide of 'include($ENV{ADF_PATH}/CMakeLists.txt)', otherwise
+# EXTRA_COMPONENT_DIRS will be overwritten by $ENV{ADF_PATH}/CMakeLists.txt
 set(EXTRA_COMPONENT_DIRS ${EXTRA_COMPONENT_DIRS}
     ${CMAKE_CURRENT_SOURCE_DIR}/../../components
 )
-
 include($ENV{IDF_PATH}/tools/cmake/project.cmake)
 
 project(liteplayer)

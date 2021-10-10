@@ -7,6 +7,8 @@ set(COMPONENT_SRCS liteplayer_debug.c)
 
 register_component()
 
+target_compile_options(${COMPONENT_TARGET} PRIVATE -DOS_RTOS -DOS_FREERTOS_ESP8266)
+
 IF (CONFIG_IDF_TARGET STREQUAL "esp32")
 set(libs_target_dir "esp32")
 ENDIF ()
