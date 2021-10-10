@@ -1,0 +1,3 @@
+[submodule "components/sysutils/sysutils"]
+	path = components/sysutils/sysutils
+	url = https://github.com/sepnic/sysutils.git
