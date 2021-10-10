@@ -199,6 +199,7 @@ void app_main()
     for (int i = 0; i < TONE_TYPE_MAX; i++) {
         os_thread tid = os_thread_create(&attr, liteplayer_demo, (void *)tone_uri[i]);
         os_thread_join(tid, NULL);
+        os_thread_sleep_msec(2000);
     }
 
     OS_LOGI(TAG, "Destroy liteplayer");
