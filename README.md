@@ -1,6 +1,8 @@
 ## Overview
 
-Liteplayer 是一个为嵌入式平台设计的低开销低延时的音频播放器，已运行在千万级别的设备上，包括 Android、iOS、Linux、RTOS 多种终端平台。
+Liteplayer 是一个为嵌入式平台设计的低开销低延时的音频播放器，已运行在千万级别的设备上，包括 Android、iOS、Linux、RTOS 多种终端平台
+
+Android demo: https://github.com/sepnic/liteplayer_android
 
 Liteplayer 具有如下特点：
 1. 支持 MP3、AAC、M4A、WAV、FLAC、OPUS 格式，支持本地文件、本地播放列表、HTTP/HTTPS/HLS 和 TTS 数据流，接口和状态机与 Android MediaPlayer 一致（本项目暂只支持 mp3、aac、m4a、wav 格式）
@@ -12,25 +14,23 @@ Liteplayer 具有如下特点：
 
 **核心播放接口**：
 - 提供播放器基本服务，包括 set_data_source、prepare、start、pause、resume、seek、stop、reset 等操作
-- [liteplayer_main.h](https://github.com/sepnic/liteplayer_esp32/blob/master/components/liteplayercore/include/liteplayer_main.h)
+- https://github.com/sepnic/liteplayer_esp32/blob/master/components/liteplayercore/include/liteplayer_main.h
 
 **列表播放接口**：
 - 除了播放器基本功能外，还支持 m3u8 协议列表、本地播放列表、切换上下首、单曲循环等操作
-- [liteplayer_listplayer.h](https://github.com/sepnic/liteplayer_esp32/blob/master/components/liteplayercore/include/liteplayer_listplayer.h)
+- https://github.com/sepnic/liteplayer_esp32/blob/master/components/liteplayercore/include/liteplayer_listplayer.h
 
 **TTS播放接口**：
 - 提供 TTS 流播放功能，支持 prepare、start、stop、reset 等操作
-- [liteplayer_ttsplayer.h](https://github.com/sepnic/liteplayer_esp32/blob/master/components/liteplayercore/include/liteplayer_ttsplayer.h)
+- https://github.com/sepnic/liteplayer_esp32/blob/master/components/liteplayercore/include/liteplayer_ttsplayer.h
 
 **播放器适配层**：
 - 数据源输入、音频设备输出的抽象接口，默认适配了 "文件流-标准文件系统"、 "网络流-httpclient"、"音频设备输出-alsa/OpenSLES/AudioTrack"
-- [liteplayer_adapter.h](https://github.com/sepnic/liteplayer_esp32/blob/master/components/liteplayercore/include/liteplayer_adapter.h)
+- https://github.com/sepnic/liteplayer_esp32/blob/master/components/liteplayercore/include/liteplayer_adapter.h
 
 **OSAL 适配层**：
 - Thread、Memory、Time 等操作系统相关的抽象接口，如果系统已支持 POSIX 接口规范，则不用修改直接使用即可
-- [sysutils](https://github.com/sepnic/liteplayer_esp32/blob/master/components/sysutils)
-
-Liteplayer android demo: https://github.com/sepnic/liteplayer_android 
+- https://github.com/sepnic/liteplayer_esp32/blob/master/components/sysutils
 
 ## Quick start
 
